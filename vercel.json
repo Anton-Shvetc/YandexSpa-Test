@@ -2,24 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "use": "@vercel/static-build",
-      "src": "build/**",
-      "config": {
-        "clean_urls": true
-      }
-    },
-    {
-      "src": "/api/.*",
-      "use": "@vercel/node",
-      "config": {
-        "memory": 128
-      }
+      "src": "./index.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/build/index.html"
+      "dest": "/"
     }
   ]
 }
