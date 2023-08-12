@@ -3,7 +3,6 @@
   "builds": [
     {
       "use": "@vercel/static-build",
-      "entrypoint": "build/index.html",
       "src": "build/**",
       "config": {
         "clean_urls": true
